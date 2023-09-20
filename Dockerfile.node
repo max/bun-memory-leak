@@ -1,0 +1,12 @@
+FROM node:alpine
+
+WORKDIR /app
+
+ENV NODE_ENV="production"
+
+COPY --link package.json ./
+RUN npm install --ci
+
+COPY --link . .
+
+CMD ["./entrypoint.sh"]
