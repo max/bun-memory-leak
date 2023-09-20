@@ -1,15 +1,6 @@
 # bun-fetch-memory-leak
 
-To install dependencies:
-
-```bash
-bun install
 ```
-
-To run:
-
-```bash
-bun run index.ts
+docker build -t bun-fetch-memory-leak .
+docker run -m 50000000 --rm -it bun-fetch-memory-leak
 ```
-
-This project was created using `bun init` in bun v1.0.2. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
